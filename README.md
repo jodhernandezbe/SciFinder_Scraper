@@ -1,6 +1,8 @@
 # SciFinder_Scraper
 This is a Python script which uses packages such as Selenium and Pandas for scraping CAS SciFinder and finding prices for chemical substances.
 
+## Requirements
+
 In order to use this code you kneed the following requirements:
 
 Markup: 1. A password and an username on SciFinder (https://accounts.cas.org/products/)
@@ -12,6 +14,8 @@ Markup: 1. A password and an username on SciFinder (https://accounts.cas.org/pro
            4.3. pandas (https://pypi.org/project/pandas/)
            4.4. regex (https://pypi.org/project/regex/)
            4.5. argparse (https://pypi.org/project/argparse/)
+
+## Use
 
 To run the code:
 Markup: 1. You must move to the folder where is SciFinder_Scapper.py
