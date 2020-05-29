@@ -138,9 +138,3 @@ if __name__ == '__main__':
     YourUsername = args.User
     Pa55worD = args.Password
     Browsing(Chemicals, File_save, YourUsername, Pa55worD)
-
-    #' '
-    # '2014/Majo'
-    # '/home/jose-d-hernandez/Documents/PCUs/Chemicals/Chemical_Price.csv'
-    # '/home/jose-d-hernandez/Documents/PCUs/Chemicals/Chemicals.csv'
-    # '/home/jose-d-hernandez/Documents/PCUs/Chemicals/Chemicals_in_categories.csv'
