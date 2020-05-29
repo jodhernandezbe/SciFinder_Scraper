@@ -20,4 +20,4 @@ In order to use this code you kneed the following requirements:
 To run the code from the Linux/Ubuntu terminal or Windows CMD:
 
 1. You must move to the folder where is SciFinder_Scapper.py
-2. Use: python SciFinder_Scapper.py -FR file_path_to_read_CAS -FS file_path_to_save_infomartion -P YourPassword -U YourUser
+2. Use: python SciFinder_Scapper.py -FR *file_path_to_read_CAS* -FS *file_path_to_save_infomartion* -P *YourPassword* -U *YourUser*
