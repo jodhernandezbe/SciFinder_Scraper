@@ -1,5 +1,5 @@
 # SciFinder_Scraper
-This is a Python script which uses Selenium for scraping CAS SciFinder and finding prices for chemical substances.
+This is a Python script which uses Selenium for scraping CAS SciFinder and extracting prices for chemical substances.
 
 ## Requirements
 
