@@ -17,9 +17,13 @@ def extract_data(browser):
     regex = r'[0-9]+\.?[0-9]*\s?[A-Za-z]+\s?\,\s?[A-Z]{3}\s?[0-9]+\.?[0-9]*'
     elements = dynamic_wait(browser, '//div[@class="quantity-price ng-star-inserted"]', Price = True)
     if elements:
-        Prices = [p.text for p in  elements if re.search(regex, p.text)]
+        Prices = [tuple([p.text,
+                     p.find_element_by_xpath('../preceding-sibling::div[1]').text,
+                     p.find_element_by_xpath('../preceding-sibling::div[3]//a[@class="company-name"]').text,
+                     p.find_element_by_xpath('../preceding-sibling::div[3]//div[@class="country-name"]').text])
+                 for p in  elements if re.search(regex, p.text)]
     else:
-        Prices = [None]
+        Prices = [tuple([None, None, None, None])]
     return Prices
 
 
@@ -94,9 +98,11 @@ def Searching_chemicals(browser, Chemicals, File_save):
             print('{:15s} {:15s} {:15s}'.format(chem, str(N_results), str(len(Prices))))
         else:
             print('{:15s} {:15s} {:15s}'.format(chem, 'No found', 'No found'))
-            Prices = ['No found, No found']
-        df = pd.concat([df, pd.DataFrame({'CAS NUMBER': [chem]*len(Prices), 'PRICE': Prices})],
-                       ignore_index = True, sort = True, axis = 0)
+            Prices = [tuple(['No found, No found', 'Not found', 'Not found', 'Not found'])]
+        df_aux = pd.DataFrame(Prices, columns =['PRICE', 'PURITY', 'COMPANY_NAME', 'COUNTRY'])
+        df_aux['CAS NUMBER'] = chem
+        df = pd.concat([df, df_aux], ignore_index = True, sort = True, axis = 0)
+        del df_aux, Prices
         dynamic_wait(browser, '//input[@name="textQuery"]', clear = True)
     browser.close()
     df[['QUANTITY','PRICE']] = df.PRICE.str.split(',', expand = True)
