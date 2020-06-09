@@ -106,7 +106,11 @@ def Searching_chemicals(browser, Chemicals, File_save):
         dynamic_wait(browser, '//input[@name="textQuery"]', clear = True)
     browser.close()
     df[['QUANTITY','PRICE']] = df.PRICE.str.split(',', expand = True)
-    #df.to_csv(File_save, sep = ',', index = False)
+    df['CURRENCY'] = df['PRICE'].str.extract('([a-zA-Z\s]+)', expand = True)
+    df['CURRENCY'] = df['CURRENCY'].str.strip()
+    df['PRICE'] = df['PRICE'].str.extract('([0-9]+\.?[0-9*])', expand = True)
+    df['PRICE'] = df['PRICE'].where(pd.notnull(df['PRICE']), 'Not found')
+    df.to_csv(File_save, sep = ',', index = False)
 
 
 if __name__ == '__main__':
