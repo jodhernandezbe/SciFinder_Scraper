@@ -137,7 +137,7 @@ if __name__ == '__main__':
 
     Chemicals = list()
     for file in args.Reading_file_path:
-        df_chemicals = pd.read_csv(file, usecols = ['CAS NUMBER'])
+        df_chemicals = pd.read_csv(file, usecols = ['CAS NUMBER'], dtype = {'CAS NUMBER': 'object'})
         df_chemicals = df_chemicals.loc[~df_chemicals['CAS NUMBER'].str.contains(r'[A-Z]')]
         df_chemicals['CAS NUMBER'] = df_chemicals['CAS NUMBER'].str.replace(r'\-', '')
         Chemicals = Chemicals + df_chemicals['CAS NUMBER'].tolist()
