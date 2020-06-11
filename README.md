@@ -23,5 +23,5 @@ To run the code from the Linux/Ubuntu terminal or Windows CMD:
 2. Use: 
 
 ```
-   python SciFinder_Scapper.py -FR *file_path_to_read_CAS* -FS *file_path_to_save_infomartion* -P *YourPassword* -U *YourUser*
+   python SciFinder_Scapper.py -FR file_path_to_read_CAS -FS file_path_to_save_infomartion -P YourPassword -U YourUser
 ```
