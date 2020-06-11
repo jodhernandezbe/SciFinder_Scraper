@@ -28,8 +28,8 @@ To run the code from the Linux/Ubuntu terminal or Windows CMD:
 ```
 The inputs accompanying the flags represent:
 
-   - *file_path_to_read_CAS*: path of the file with the CAS numbers to search for.
-   - *file_path_to_save_infomartion*: path of the file that you will used to save the information.
+   - *file_path_to_read_CAS*: path of the file where you have the CAS numbers for searching.
+   - *file_path_to_save_infomartion*: path of the file where you will save the information.
    - *YourPassword*: your password in SciFinder<sup>n</sup>.
    - *YourUser*: your user registered in SciFinder<sup>n</sup>.
 
