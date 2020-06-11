@@ -26,10 +26,12 @@ To run the code from the Linux/Ubuntu terminal or Windows CMD:
 ```
    python SciFinder_Scapper.py -FR file_path_to_read_CAS -FS file_path_to_save_infomartion -P YourPassword -U YourUser
 ```
-   - file_path_to_read_CAS: path of the file with the CAS numbers to search for.
-   - file_path_to_save_infomartion: path of the file that you will used to save the information.
-   - YourPassword: your password in SciFinder<sup>n</sup>.
-   - YourUser: your user registed in SciFinder<sup>n</sup>
+The inputs accompanying the flags represent:
+
+   - *file_path_to_read_CAS*: path of the file with the CAS numbers to search for.
+   - *file_path_to_save_infomartion*: path of the file that you will used to save the information.
+   - *YourPassword*: your password in SciFinder<sup>n</sup>.
+   - *YourUser*: your user registered in SciFinder<sup>n</sup>.
 
 ## Output
 
