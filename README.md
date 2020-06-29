@@ -4,7 +4,7 @@ This is a Python script which uses Selenium for scraping CAS SciFinder<sup>n</su
 
 ## Requirements
 
-In order to use this code you kneed the following requirements:
+In order to use this code you need the following requirements:
 
 1. A password and an username on SciFinder<sup>n</sup> (https://accounts.cas.org/products/)
 2. Google Chrome installed in your computer. However, you can modify the code and use other selenium driver (e.g., Firefox)
