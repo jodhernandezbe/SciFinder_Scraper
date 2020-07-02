@@ -48,7 +48,7 @@ def dynamic_wait(browser, path, click = False, send = False, chem =  None, Price
         pass
 
 
-def Browsing(Chemicals, File_save, YourUsername, Pa55worD):
+def browsing(Chemicals, File_save, YourUsername, Pa55worD):
     options = Options()
     options.headless = True
     options.add_argument('--disable-notifications')
@@ -72,10 +72,10 @@ def Browsing(Chemicals, File_save, YourUsername, Pa55worD):
     password.send_keys(Pa55worD)
     browser.find_element_by_xpath('//button[@id="loginButton"]').click()
     dynamic_wait(browser, '//label[@for="result-type-commercial"]', click = True)
-    Searching_chemicals(browser, Chemicals, File_save)
+    searching_chemicals(browser, Chemicals, File_save)
 
 
-def Searching_chemicals(browser, Chemicals, File_save):
+def searching_chemicals(browser, Chemicals, File_save):
     df = pd.DataFrame()
     print('-' * 45)
     print('{:15s} {:15s} {:15s}'.format('CAS Number', '# supplier(s)', '# price(s)'))
@@ -147,4 +147,4 @@ if __name__ == '__main__':
     File_save = args.Saving_file_path
     YourUsername = args.User
     Pa55worD = args.Password
-    Browsing(Chemicals, File_save, YourUsername, Pa55worD)
+    browsing(Chemicals, File_save, YourUsername, Pa55worD)
