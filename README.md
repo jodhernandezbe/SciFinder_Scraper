@@ -20,11 +20,11 @@ In order to use this code you need the following requirements:
 
 To run the code from the Linux/Ubuntu terminal or Windows CMD:
 
-1. You must move to the folder where is scifinder_scapper.py
+1. You must move to the folder where is scifinder_scraper.py
 2. Run the following command: 
 
 ```
-   python scifinder_scapper.py -FR file_path_to_read_CAS -FS file_path_to_save_infomartion -P YourPassword -U YourUser
+   python scifinder_scraper.py -FR file_path_to_read_CAS -FS file_path_to_save_infomartion -P YourPassword -U YourUser
 ```
 The inputs accompanying the flags represent:
 
